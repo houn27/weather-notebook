@@ -9,8 +9,9 @@ location api: google map
 
 ![title](https://upload.cc/i1/2019/12/19/KETP0p.png).
 
-p.s.maybe the weather api will be expired in 26/12/2019, I will try to change a free api as soon as possible
+p.s.maybe the weather api will become expired on 26/12/2019, I will try to change a free api as soon as possible
 
+contact me: houn27@163.com
 ## function:
 login/out (id:abc ,password:123)
 
