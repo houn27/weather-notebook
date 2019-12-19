@@ -1,11 +1,18 @@
 <template>
-    <div>
-        <span>Weather Notebook</span>
-        <span style="width:1020px;display:inline-block;"></span>
-        <el-button-group v-show="!this.$store.state.signUp">
-            <el-button type="primary" size="small" @click="dialogFormVisible = true">sign in<i class="el-icon-user-solid el-icon--right"></i></el-button>
-            <el-button size="small" @click="registerFormVisible = true">register</el-button>
-        </el-button-group>
+    <el-row type="flex">
+        <el-col :span="4">
+            <img style="width: 25px; height: 25px;display: inline-block;margin-bottom:5px;" :src="require('../assets/icon.png')"  align="absmiddle"/>
+            <div style="display: inline-block; ">Weather Notebook</div>
+        </el-col>
+        
+        <el-col :span="16"></el-col>
+        <el-col :span="4">
+            <el-button-group v-show="!this.$store.state.signUp">
+                <el-button type="primary" size="small" @click="dialogFormVisible = true">sign in<i class="el-icon-user-solid el-icon--right"></i></el-button>
+                <el-button size="small" @click="registerFormVisible = true">register</el-button>
+            </el-button-group> 
+        </el-col>
+        
         <div v-show="this.$store.state.signUp" style="display:inline-block">
             <el-dropdown @command="handleCommand">
                 <el-button type="primary" icon="el-icon-user-solid" circle size="mini" class="el-dropdown-link"></el-button>
@@ -50,7 +57,7 @@
                 <el-button type="primary" @click="registerUser">sign up</el-button>
             </div>
         </el-dialog>
-    </div>
+    </el-row>
 </template>
 <script>
 export default {
@@ -102,4 +109,6 @@ export default {
 .el-avatar, .el-drawer {
     overflow:visible;
 }
+
+
 </style>

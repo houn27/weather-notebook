@@ -10,7 +10,7 @@
             <img width="100%" :src="ImageUrl" alt="" >
           </el-dialog>
         </div>
-        <el-button type="info" @click="handleSend" style="margin:10px 0px">Submit</el-button>
+        <el-button type="primary" @click="handleSend" style="margin:10px 0px">Submit</el-button>
         <div class="link-top1" v-show="list.length"></div>
         <!-- <List :list="list"></List> -->
         <Daily :list="list"></Daily>

@@ -6,9 +6,9 @@
     <el-row type="flex" justify="center">
       <el-col :span="16">
           <el-container>
-            <el-aside width="180px">
+            <el-aside width="220px">
               
-                 <el-menu :router=true>
+                 <el-menu :router=true default-active="/dailyList">
                    <el-menu-item index="/dailyList"><i class="el-icon-edit"></i><span slot="title">Post</span></el-menu-item>
                    <el-menu-item index="/shareList" style="margin-bottom:10px"><i class="el-icon-share"></i><span slot="title">Share</span></el-menu-item>
                  </el-menu>
@@ -42,9 +42,9 @@ export default {
   data(){
       return{
         zhifuShow:false,
-        url: '../src/assets/zhifubao.jpg',
+        url: "require('../src/assets/zhifubao.jpg')",
         srcList: [
-          '../src/assets/zhifubao.jpg',
+          "require('../src/assets/zhifubao.jpg')"
         ],
         showFoot:false,
       }
@@ -77,7 +77,6 @@ export default {
     background-color:#f6f9fa;
     color: #999;
     text-align: center;
-    
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -87,7 +86,7 @@ export default {
     background-color: white;
     color: rgb(26, 27, 73);
     line-height: 60px;
-    padding-left:100px;
+    padding-left:250px;
     box-shadow: 0 0 1px 0px rgba(0,0,0,0.3), 0 0 6px 2px rgba(0,0,0,0.15);
   }
   
