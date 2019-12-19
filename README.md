@@ -1,6 +1,6 @@
 # weather-Notebook
 
-##Introduction
+## Introduction
 this is a front-end of website that can post everyday status with photos/text/weather/time/location
 
 weather api:https://www.seniverse.com/
@@ -11,14 +11,14 @@ location api: google map
 
 p.s.maybe the weather api will be expired in 26/12/2019, I will try to change a free api as soon as possible
 
-##function:
+## function:
 login/out (id:abc ,password:123)
 
 post status
 
 share favorite links(developing)
 
-##framework
+## framework
 Vue2.0
 
 Vue-Router
@@ -30,7 +30,7 @@ axios
 element ui
 
 
-##file dictionary
+## file dictionary
 ├── build                   // help
 
 ├── config                  //config files
