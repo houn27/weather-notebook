@@ -52,10 +52,10 @@ export default {
             var geocoder = new google.maps.Geocoder();
             var myLatLng = new google.maps.LatLng({lat:_this.lat1, lng: _this.lng1}); 
             //通过google earth得位置信息
-          //   var city=geocoder.geocode ({ location: myLatLng } ,function(GeocoderResult,GeocoderStatus){
-          //       //console.log(GeocoderResult[0]);
-          //       _this.loc=GeocoderResult[0].address_components[GeocoderResult[0].address_components.length-3].short_name;
-          // });
+            var city=geocoder.geocode ({ location: myLatLng } ,function(GeocoderResult,GeocoderStatus){
+                //console.log(GeocoderResult[0]);
+                _this.loc=GeocoderResult[0].address_components[GeocoderResult[0].address_components.length-3].short_name;
+          });
           _this.getWeather(_this.lat1,_this.lng1);
           
           });
@@ -65,13 +65,13 @@ export default {
     getWeather(lat,lng){
       let _this=this;
       //console.log(_this.loc);
-      this.$http.get('wea/now.json?key=SD526QbBBR57MSLy5&location='+lat+':'+lng+'&language=en&unit=c').then(res=>{
-          console.log(res.data.results[0].location.name);
+      this.$http.get('wea/4efc8d5b0cfed4ce1296ad6e84063e11/'+lat+','+lng).then(res=>{
+          console.log(res.data.currently);
           //_this.imgPath='../assets/weather-icon/'+res.data.results[0].now.code+'.png';
-          _this.imgSrc=require('../assets/weather-icon/'+res.data.results[0].now.code+'.png');
-          _this.temperature=res.data.results[0].now.temperature;
-          _this.weather=res.data.results[0].now.text;
-          _this.loc=res.data.results[0].location.name
+          _this.imgSrc=require('../assets/weather-icon/'+res.data.currently.icon+'.png');
+          _this.temperature=Math.round(((res.data.currently.temperature-32)/1.8)* 10) / 10;
+          _this.weather=res.data.currently.summary;
+          
           _this.$emit('weather',{
             //imgSrc:_this.imgSrc,
             temperature:_this.temperature,

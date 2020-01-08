@@ -19,7 +19,7 @@ module.exports = {
         }
       },
       '/wea':{
-        target: 'https://api.seniverse.com/v3/weather',//这里是域名，不是完整地址
+        target: 'https://api.darksky.net/forecast',//这里是域名，不是完整地址
         secure:true,
         changeOrigin: true,//是否跨域
         pathRewrite: {

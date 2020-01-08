@@ -1,7 +1,7 @@
 <template>
     <el-row type="flex">
         <el-col :span="4">
-            <img style="width: 25px; height: 25px;display: inline-block;margin-bottom:5px;" :src="require('../assets/icon.png')"  align="absmiddle"/>
+            <img style="width: 25px; height: 25px;display: inline-block;margin-bottom:5px;" :src="require('../assets/icon-1.png')"  align="absmiddle"/>
             <div style="display: inline-block; ">Weather Notebook</div>
         </el-col>
         
