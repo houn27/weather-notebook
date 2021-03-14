@@ -3,6 +3,10 @@
 ## Introduction
 this is a front-end of website that can post everyday status with photos/text/weather/time/location
 
+the author has created a social website:www.oursbond.com
+
+whose frontend is based on this project.
+
 weather api:https://darksky.net/dev
 
 location api: google map
